@@ -4,15 +4,20 @@ pipeline {
     tools {nodejs "node"}
 
     stages {
+        stage('Dependencies') {
+            steps {
+                sh 'npm i'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'node -v'
-                sh 'npm build'
+                sh 'npm run build'
             }
         }
         stage('Unit Tests') {
             steps {
-                sh 'npm test'
+                sh 'npm run test'
             }
         }
         stage('e2e Tests') {
