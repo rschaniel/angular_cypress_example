@@ -8,7 +8,7 @@
     "start": "ng serve",
     "test": "ng test",
     "build": "ng build --prod",
-    "e2e": "ng e2e",
+    "e2e": "cypress run",
     "ng": "ng",
     "cypress:open": "$(npm bin)/cypress open"
   },
