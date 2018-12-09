@@ -2,15 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Check') {
-            steps {
-                sh 'nvm list'
-                sh 'nvm use default'
-                sh 'node -v'
-            }
-        }
         stage('Build') {
             steps {
+                sh 'node -v'
                 sh 'npm build'
             }
         }
