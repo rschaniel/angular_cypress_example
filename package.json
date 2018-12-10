@@ -8,9 +8,11 @@
     "start": "ng serve",
     "test": "ng test",
     "build": "ng build --prod",
-    "e2e": "cypress run",
+    "e2e": "npm start && cypress run",
     "ng": "ng",
-    "cypress:open": "$(npm bin)/cypress open"
+    "cypress:open": "$(npm bin)/cypress open",
+    "cy:run": "cypress run",
+    "cy:ci": "start-server-and-test start http://localhost:4200 cy:run"
   },
   "keywords": [],
   "author": "",
@@ -51,6 +53,7 @@
     "lodash": "^4.16.2",
     "phantomjs-prebuilt": "^2.1.7",
     "protractor": "~5.4.0",
+    "start-server-and-test": "^1.7.11",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.1"
