@@ -6,13 +6,14 @@
   "scripts": {
     "lint": "tslint ./src/**/*.ts -t verbose",
     "start": "ng serve",
+    "start:ci": "my-server -p 3030",
     "test": "ng test",
     "build": "ng build --prod",
     "e2e": "npm start && cypress run",
     "ng": "ng",
     "cypress:open": "$(npm bin)/cypress open",
     "cy:run": "cypress run",
-    "cy:ci": "start-server-and-test start http://localhost:4200 cy:run"
+    "cy:ci": "start-server-and-test start:ci http://localhost:3030 cy:run"
   },
   "keywords": [],
   "author": "",
