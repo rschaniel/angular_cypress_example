@@ -12,6 +12,7 @@
     "ng": "ng",
     "cypress:open": "$(npm bin)/cypress open",
     "cypress:ci": "npm-run-all --parallel --race start:ci cypress:run",
+    "cypress:ci2": "concurrently \"ng serve\" \"cypress run\"",
     "start:ci": "http-server ./dist/ -a localhost -p 4200 -c-1",
     "cypress:run": "cypress run"
   },
@@ -42,6 +43,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "^2.0.4",
     "@types/node": "~8.9.4",
+    "concurrently": "^4.1.0",
     "cypress": "^3.1.2",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
