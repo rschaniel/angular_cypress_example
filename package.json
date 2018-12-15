@@ -12,7 +12,7 @@
     "ng": "ng",
     "cypress:open": "$(npm bin)/cypress open",
     "cypress:ci": "npm-run-all --parallel --race start:ci cypress:run",
-    "cypress:ci2": "concurrently \"cypress run\" \"ng serve\" --success first",
+    "cypress:ci2": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first",
     "start:ci": "http-server ./dist/ -a localhost -p 4200 -c-1",
     "cypress:run": "cypress run"
   },
