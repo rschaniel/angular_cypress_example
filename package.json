@@ -6,14 +6,14 @@
   "scripts": {
     "lint": "tslint ./src/**/*.ts -t verbose",
     "start": "ng serve",
-    "start:ci": "my-server -p 3030",
     "test": "ng test",
     "build": "ng build --prod",
     "e2e": "npm start && cypress run",
     "ng": "ng",
     "cypress:open": "$(npm bin)/cypress open",
-    "cy:run": "cypress run",
-    "cy:ci": "start-server-and-test start:ci http://localhost:3030 cy:run"
+    "cypress:ci": "run-p --race start:ci cypress:run",
+    "start:ci": "http-server ./dist/ -a localhost -p 4200 -c-1",
+    "cypress:run": "cypress run"
   },
   "keywords": [],
   "author": "",
@@ -52,6 +52,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.2",
     "lodash": "^4.16.2",
+    "npm-run-all": "^4.1.5",
     "phantomjs-prebuilt": "^2.1.7",
     "protractor": "~5.4.0",
     "start-server-and-test": "^1.7.11",
