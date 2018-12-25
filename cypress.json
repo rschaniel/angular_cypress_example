@@ -1,7 +1,8 @@
 {
-  "reporter": "junit",
+  "reporter": "mocha-jenkins-reporter",
   "reporterOptions": {
-    "mochaFile": "results/cypress-report.xml",
-    "toConsole": true
+    "junit_report_name": "Tests",
+    "junit_report_path": "results/cypress-report.xml",
+    "junit_report_stack": 1
   }
 }
