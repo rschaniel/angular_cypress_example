@@ -4,7 +4,7 @@ describe('Testing the hero list page', function() {
     cy.visit('http://localhost:4200/heroes');
 
     const heroesListElements = cy.get('ul.heroes > li');
-    heroesListElements.should('have.length', 10);
+    heroesListElements.should('have.length', 9);
   });
 
   it('should add a new hero to the list when creating a new hero', function() {
