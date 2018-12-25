@@ -34,5 +34,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        post {
+            always {
+                junit 'results/cypress-report.xml'
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 {
   "reporter": "junit",
   "reporterOptions": {
-    "mochaFile": "results/my-test-output.xml",
+    "mochaFile": "results/cypress-report.xml",
     "toConsole": true
   }
 }
