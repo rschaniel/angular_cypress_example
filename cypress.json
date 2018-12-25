@@ -1,9 +1,10 @@
 {
   "reporter": "mocha-jenkins-reporter",
+  "screenshotsFolder": "results",
   "reporterOptions": {
     "junit_report_name": "e2e Tests",
     "junit_report_path": "results/cypress-report.xml",
     "junit_report_stack": 1,
-    "screenshots": "spec"
+    "screenshots": "loop"
   }
 }
