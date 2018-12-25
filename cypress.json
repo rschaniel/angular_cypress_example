@@ -3,6 +3,5 @@
   "reporterOptions": {
     "mochaFile": "results/cypress-report.xml",
     "toConsole": true,
-    "attachments": true
   }
 }
