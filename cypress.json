@@ -1,9 +1,7 @@
 {
-  "reporter": "mocha-junit-reporter",
+  "reporter": "junit",
   "reporterOptions": {
     "mochaFile": "results/cypress-report.xml",
-    "testCaseSwitchClassnameAndName": true,
-    "toConsole": true,
-    "attachments": true
+    "toConsole": true
   }
 }
